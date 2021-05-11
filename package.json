@@ -1,9 +1,9 @@
 {
-  "name": "coown-xx",
+  "name": "crown36",
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www",
+    "start": "nodemon ./bin/www"
     "dev": "nodemon ./bin/www"
   },
   "dependencies": {

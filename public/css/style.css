@@ -6,7 +6,8 @@
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+ monospace;
 }
 
 body {
@@ -33,8 +34,9 @@ a {
 
 .header .logo-container {
   height: 100%;
-  width: 70px;
+  width: 300px;
   padding: 25px;
+  display:flex;
 }
 
 .header .options {

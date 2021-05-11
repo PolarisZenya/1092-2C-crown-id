@@ -1,3 +1,7 @@
+var express = require('express');
+var router = express.Router();
+const mysql = require('mysql2');
+
 const categories =
 [
   {
@@ -36,4 +40,37 @@ const categories =
     local_url:'/img/homepage/mens.png'
   },
 ]
-module.exports = categories;
+
+// create the pool
+const pool = mysql.createPool({
+  host:'localhost',
+  user: 'root',
+  password: '0000',
+  database: 'crown_36'});
+
+const db = pool.promise();
+/* GET home page. */
+router.get('/', function(req, res, next) {
+  res.render('crown2_36', 
+  { 
+    title: '408410636葉忠諺 (static)' ,
+    data: categories
+  });
+});
+
+/* GET database. */
+router.get('/homepage',async function(req, res, next) {
+
+  const [rows] =await db.query("SELECT * from category_36")
+  let data = rows;
+
+  //res.json(data);
+  
+  res.render('crown2_36', 
+  { 
+    title: '408410636葉忠諺 (async/mysql_db)' ,
+    data
+  });
+});
+
+module.exports = router;

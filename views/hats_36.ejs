@@ -37,30 +37,29 @@
                 <span class="price">1 * $90</span>
               </div>
             </div>
+            <button class="custom-button">GO TO CHECKOUT</button>
           </div>
-          <button class="custom-button">GO TO CHECKOUT</button>
         </div>
       </div>
     </div>
 
-    <div class="homepage">
-      <h3><%= title %></h3>
-      <div class="directory-menu">
-        <% for(let i=0; i<data.length; i++ ) { %>
-          <div class="<%= data[i].size %> menu-item">
-            <img
-              class="background-image"
-              src="<%= data[i].local_url %>"
-              alt=""
-            />
-            <a href="/shop_xx/<%= data[i].name %>" class="content">
-              <h1 class="title">"<%= data[i].name.toUpperCase() %></h1>
-              <span class="subtitle">SHOP NOW</span>
-            </a>
-          </div>          
-        <% } %>
+    <div class="shop-page">
+      <div class="collection-page">
+        <h1 class="title">Hats</h1>
+        <div class="items">
+          
+          <% for(let i=0;i<data.clothing.length;i++){ %>
+            <div class="collection-item">
+              <img class="image" src=<%=data.clothing[i].remote_url %>  />
+              <div class="collection-footer">
+                <span class="name"><%=data.clothing[i].name %></span>
+                <span class="price"><%=data.clothing[i].price %></span>
+              </div>
+              <button class="custom-button">Add to Cart</button>
+            </div>
+            <% } %>
 
-
+        </div>
       </div>
     </div>
 
