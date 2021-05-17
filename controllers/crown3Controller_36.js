@@ -7,13 +7,12 @@ exports.getHomepage = async (reg,res) => {
     const [rows] = await categoryMd_36.fetchAll();
     data = rows;
 
-    res.json(data);
-    /*
+    //res.json(data);
     res.render('crown3_36', 
     { 
         title: '408410636葉忠諺 (async/mysql_db)' ,
         data
-    });*/
+    });
 }
 exports.getProductsByCategory = async (req,res) => {
     var user_input = req.params.product;

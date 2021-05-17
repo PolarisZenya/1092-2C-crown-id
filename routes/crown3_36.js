@@ -7,7 +7,7 @@ const mysql = require('mysql2');
 const category = require("../data/categories.js");
 //const db = require("../utils/database.js");
 router.get('/', function(req, res, next) {
-  res.render('crown2_36', 
+  res.render('crown3_36', 
   { 
     title: '408410636葉忠諺 (static)' ,
     data: category
